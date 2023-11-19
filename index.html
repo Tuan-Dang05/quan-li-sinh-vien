@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+    </head>
+    <body onload="listStudent()">
+        <div class="form_student">
+            <h2><i> Thông Tin Sinh Viên</i> </h2>
+            <span id="fullname_error"></span>
+            <label for="HoTen">Họ Và Tên: </label>
+            <input type="text" id="full_name" placeholder="Nhập họ và tên ">
+            <br/>
+            <span id="email_error"></span>
+            <label for="email">Email: </label>
+            <input type="text" id="email" placeholder="example@gmail.com">
+            <br/>
+            <span id="phone_error"></span>
+            <label for="phone">Điện Thoại: </label>
+            <input type="text" id="phone" placeholder="0912345678">
+            <br/>
+            <span id="address_error"></span>
+            <label for="address">Địa Chỉ: </label>
+            <input type="text" id="address" placeholder="Hà Nội">
+            <br/>
+            <label for="gender">Giới Tính</label>
+            <div class="gender">
+            <input type="radio" name="gender" id="male" value="Nam"/> Nam
+            <input type="radio" name="gender" id="female" value="Nữ" /> Nữ
+            <p id="gender_error"></p>
+            </div>
+            <label>&nbsp;</label>
+            <button onclick="save()">Save</button>
+        </div>
+        <div class="list_student">
+            <h2><i> Danh Sách Sinh Viên</i> </h2>
+            <table id="view_students" width="750" border="2" cellspacing="1" cellpadding="0" style="color: white; margin:0 auto;">
+                <!-- <tr>
+                    <td>STT</td>
+                    <td>Họ và Tên</td>
+                    <td>Email</td>
+                    <td>Điện Thoại</td>
+                    <td>Địa Chỉ</td>
+                    <td>Giới Tính</td>
+                    <td>Hành Động</td>
+                </tr> -->
+            </table>
+        </div>
+        <!-- Nhúng thư viện lodash -->
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+        <script src="./sv.js"></script>
+    </body>
+</html>
